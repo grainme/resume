@@ -5,7 +5,7 @@ const MainContent = () => {
   return (
     <div className='flex flex-col '>
       {/* Hero Section */}
-      <div className='flex md:flex-row flex-col md:gap-[7rem] gap-[3rem] justify-between items-center'>
+      <div className='flex xl:flex-row flex-col md:gap-[7rem] gap-[3rem] justify-between items-center'>
         <div className='flex-1'>
           <div className="md:text-[18px] font-regular text-white">
             Hey there! I&apos;m Marouane Boufarouj, Software Engineer from Morocco.
@@ -103,7 +103,7 @@ const MainContent = () => {
                   <div className="w-4 h-4 bg-white rounded-full relative z-10 mb-4"></div>
                   <div className="text-xs text-gray-400 mb-2">2022</div>
                   <h4 className="text-sm font-semibold text-white mb-1">Contest Debut</h4>
-                  <p className="text-xs text-gray-300">33rd @ 1337</p>
+                  <p className="text-xs text-gray-300">33rd, Competitive Programming (MNPC)</p>
                 </div>
 
                 <div className="flex flex-col items-center text-center max-w-[100px]">
@@ -117,7 +117,7 @@ const MainContent = () => {
                   <div className="w-4 h-4 bg-white rounded-full relative z-10 mb-4"></div>
                   <div className="text-xs text-gray-400 mb-2">2023</div>
                   <h4 className="text-sm font-semibold text-white mb-1">Top 5%</h4>
-                  <p className="text-xs text-gray-300">14th @ UM6P</p>
+                  <p className="text-xs text-gray-300">14th, Competitive Programming (MNPC)</p>
                 </div>
 
                 <div className="flex flex-col items-center text-center max-w-[100px]">
@@ -158,10 +158,30 @@ const MainContent = () => {
             What I know
           </h2>
           <div className="flex flex-wrap justify-center gap-4">
-            {['Java', 'Python', 'Rust', 'C/C++', 'JS'].map((tech) => (
-              <span key={tech} className="px-4 py-2 text-white">
-                {tech}
-              </span>
+            {[
+              { name: 'Java', icon: '☕', color: '#f89820' },
+              { name: 'Python', icon: '🐍', color: '#3776ab' },
+              { name: 'Rust', icon: '🦀', color: '#dea584' },
+              { name: 'C/C++', icon: '⚡', color: '#00599c' },
+              { name: 'JS', icon: '🟨', color: '#f7df1e' }
+            ].map((tech) => (
+              <div 
+                key={tech.name} 
+                className="group relative px-4 py-2 text-white cursor-pointer transition-all duration-300 hover:scale-110"
+              >
+                <div className="flex items-center gap-2">
+                  <span className="text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    {tech.icon}
+                  </span>
+                  <span className="group-hover:font-semibold transition-all duration-300">
+                    {tech.name}
+                  </span>
+                </div>
+                <div 
+                  className="absolute inset-0 rounded-lg opacity-0 group-hover:opacity-20 transition-opacity duration-300"
+                  style={{ backgroundColor: tech.color }}
+                ></div>
+              </div>
             ))}
           </div>
         </div>
