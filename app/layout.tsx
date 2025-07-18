@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "../public/fonts/cabinet-grotesk/cabinet-grotesk.css";
+import "../public/fonts/comico/comico.css";
 
 export const metadata: Metadata = {
   title: "Portfolio",
@@ -13,10 +15,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <link rel="stylesheet" href="/fonts/cabinet-grotesk/cabinet-grotesk.css" />
-        <link rel="stylesheet" href="/fonts/comico/comico.css" />
-      </head>
       <body className="antialiased">
         {children}
       </body>

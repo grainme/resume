@@ -8,7 +8,7 @@ const MainContent = () => {
       <div className='flex md:flex-row flex-col md:gap-[7rem] gap-[3rem] justify-between items-center'>
         <div className='flex-1'>
           <div className="md:text-[18px] font-regular text-white">
-            Hey there! I'm Marouane Boufarouj, Software Engineer from Morocco.
+            Hey there! I&apos;m Marouane Boufarouj, Software Engineer from Morocco.
           </div>
           <p className="text-gray-400 leading-relaxed md:text-[16px] text-[14px]">
             Currently a Research Assistant at Oracle, graduated in June 2025 as a State Engineer 
@@ -34,7 +34,7 @@ const MainContent = () => {
       <div className="text-center max-w-3xl mx-auto mt-[3rem]">
         <h2 className="text-2xl font-bold text-white mb-6 font-comico">My Goal</h2>
         <p className="text-lg text-gray-300 leading-relaxed italic">
-          "Work on something that positively impacts many people, alongside smart individuals you can learn from, in a supportive environment and get paid while doing it."
+          &ldquo;Work on something that positively impacts many people, alongside smart individuals you can learn from, in a supportive environment and get paid while doing it.&rdquo;
         </p>
       </div>
 
