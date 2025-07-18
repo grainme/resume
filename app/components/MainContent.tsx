@@ -18,7 +18,7 @@ const MainContent = () => {
         
         <div className="flex flex-col items-center flex-shrink-0">
           <Image 
-            src="/images/PPD1.jpeg" 
+            src="/images/PPD1.JPEG" 
             alt="Marouane Boufarouj" 
             width={400} 
             height={240}
