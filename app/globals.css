@@ -1,26 +1,46 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Tailwind v4 font family configuration */
+@theme {
+  --font-family-sans: 'Cabinet Grotesk', ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-family-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  
+  /* Custom font families */
+  --font-family-cabinet: 'Cabinet Grotesk', ui-sans-serif, system-ui, sans-serif;
+  --font-family-comico: 'Comico', ui-serif, Georgia, serif;
+  --font-family-cabinet-variable: 'Cabinet Grotesk Variable', ui-sans-serif, system-ui, sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+html,
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-family-sans);
+  background-color: #0e0e0e;
+}
+
+/* Utility classes for font usage */
+.font-cabinet {
+  font-family: var(--font-family-cabinet);
+}
+
+.font-comico {
+  font-family: var(--font-family-comico);
+}
+
+.font-cabinet-variable {
+  font-family: var(--font-family-cabinet-variable);
+}
+
+/* Special case classes for Comico */
+.text-display {
+  font-family: var(--font-family-comico);
+}
+
+.text-decorative {
+  font-family: var(--font-family-comico);
+}
+
+.text-hero {
+  font-family: var(--font-family-comico);
 }
